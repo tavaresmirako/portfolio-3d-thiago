@@ -1,0 +1,9 @@
+{
+  "name": "Yan Chapetta Portfolio",
+  "short_name": "Yan Chapetta",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b1120",
+  "theme_color": "#6366f1",
+  "icons": []
+}

@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bg-surface: #0b1120;
+  --bg-surface-muted: #131c31;
+  --bg-overlay: rgba(99, 102, 241, 0.16);
+  --text-primary: #000000;
+  --text-secondary: #000000;
+  --accent: #22d3ee;
+}
+
+/* ── Force all text black and bold ───────────────────────────── */
+*, *::before, *::after {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Section Content Cards ──────────────────────────────────── */
+/* Matte crumpled-paper look — excludes projects section (has data-no-card) */
+section > div:not([aria-hidden]):not([data-no-card]) {
+  background-color: #f0ece4 !important;          /* warm off-white like aged paper */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23paper)' opacity='0.18'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #f5f0e8 0%, #ece7dd 40%, #e6e0d6 100%) !important;
+  border-radius: 2rem !important;
+  border: 1px solid rgba(180, 160, 130, 0.3) !important;
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.8) inset,          /* top highlight like paper edge */
+    0 -1px 0 rgba(0,0,0,0.04) inset,              /* bottom shadow */
+    0 10px 50px rgba(0, 0, 0, 0.22),
+    0 2px 8px rgba(0, 0, 0, 0.10) !important;
+  padding: 2.5rem !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Individual Project Cards ─────────────────────────────────── */
+.project-card {
+  background-color: #f0ece4;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeBlend in='SourceGraphic' mode='multiply'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23paper)' opacity='0.18'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #f5f0e8 0%, #ece7dd 40%, #e6e0d6 100%);
+  border-radius: 2.5rem;                           /* slightly larger than section cards */
+  border: 2px solid rgba(180, 160, 130, 0.35);
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.8) inset,
+    0 -1px 0 rgba(0,0,0,0.04) inset,
+    0 12px 50px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition:
+    box-shadow 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(6, 182, 212, 0.55);           /* dark cyan neon border */
+  box-shadow:
+    0 2px 0 rgba(255,255,255,0.8) inset,
+    0 -1px 0 rgba(0,0,0,0.04) inset,
+    0 0 0 1px rgba(6, 182, 212, 0.25),             /* inner neon ring */
+    0 0 28px 6px rgba(6, 182, 212, 0.18),          /* soft neon bloom */
+    0 0 60px 12px rgba(99, 102, 241, 0.12),        /* deep violet halo */
+    0 20px 60px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Offset existing section padding so cards don't double-pad */
+section {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+@media (min-width: 640px) {
+  section > div:not([aria-hidden]) {
+    padding: 3rem !important;
+  }
+  section {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  section > div:not([aria-hidden]) {
+    padding: 3.5rem !important;
+  }
+  section {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+}
+
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--bg-surface);
+  color: #000000;
+  background-image: radial-gradient(
+      780px circle at 0px 0px,
+      var(--bg-overlay),
+      transparent 60%
+    ),
+    radial-gradient(
+      600px circle at 100% 50%,
+      rgba(45, 212, 191, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      780px circle at 50% 100%,
+      rgba(56, 189, 248, 0.12),
+      transparent 60%
+    );
+  transition: background-color 300ms ease, color 300ms ease;
+  position: relative;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), rgba(34, 211, 238, 0.3), transparent);
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 0 15px 1px rgba(99, 102, 241, 0.15);
+}
+
+body::before {
+  top: 0;
+}
+
+body::after {
+  bottom: 0;
+}
+
+::selection {
+  background-color: rgba(92, 108, 255, 0.65);
+  color: #f8fafc;
+}
+
+.backdrop-glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 35px rgba(99, 102, 241, 0.25);
+}
+
+.hero-grid {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 0
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 0
+    );
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.85), transparent 70%);
+}
+
+.noise-overlay {
+  position: relative;
+}
+
+.noise-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.shine-border {
+  position: relative;
+  isolation: isolate;
+}
+
+.shine-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    120deg,
+    rgba(99, 102, 241, 0.4) 0%,
+    rgba(34, 211, 238, 0.3) 50%,
+    rgba(99, 102, 241, 0.4) 100%
+  );
+  opacity: 0.4;
+  filter: blur(8px);
+  z-index: -1;
+  animation: border-glow 4s linear infinite;
+}
+
+@keyframes border-glow {
+  0%, 100% { opacity: 0.2; filter: blur(8px); }
+  50% { opacity: 0.5; filter: blur(12px); }
+}
+
+.dot-border {
+  background-image: radial-gradient(circle at top left, rgba(92, 108, 255, 0.35), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(20, 184, 166, 0.35), transparent 45%);
+}
