@@ -116,6 +116,44 @@ export const softSkillHighlights: string[] = [
 
 export const projects: Project[] = [
   {
+    slug: "tavaresjarvs-ia",
+    title: "TavaresJARVS IA",
+    description:
+      "O TavaresJARVS é uma plataforma de inteligência artificial desenvolvida para integrar assistente por voz e texto, memória de longo prazo, automação de tarefas e coordenação de agentes especializados. Construído com React, Node.js, Fastify, WebSocket, Whisper, PostgreSQL, pgvector e arquitetura RAG, o projeto permite reconhecer comandos de voz, identificar usuários, recuperar conversas anteriores, acompanhar atividades em tempo real e executar pesquisas e automações de navegador com segurança. O projeto demonstra experiência prática em engenharia de software, IA generativa, processamento de voz, sistemas multiagentes, bancos vetoriais, APIs, arquitetura backend, segurança, observabilidade e automação, transformando um chatbot tradicional em uma plataforma inteligente, personalizada e escalável.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Three.js",
+      "Node.js",
+      "Fastify",
+      "WebSocket",
+      "Whisper",
+      "Kokoro",
+      "PostgreSQL",
+      "pgvector",
+      "SQLite",
+      "better-sqlite3",
+      "SearXNG",
+      "Playwright",
+      "OpenCode/Codex",
+      "Linux",
+      "VPS",
+      "NGINX",
+      "Git",
+      "GitHub",
+    ],
+    repoUrl: "https://github.com/tavaresmirako/TavaresJARVS",
+    liveUrl: "https://tavaresjarvs.nexzoautomacoes.online/",
+    imageUrl: "/images/project/tavaresjarvs-capa.png",
+    gallery: ["/images/project/tavaresjarvs-01.png"],
+    accent: "from-cyan-500/70 via-emerald-400/50 to-transparent",
+    role: "IA Agentic Platform",
+    category: "Pessoais",
+    status: "Em evolução",
+    imageFit: "contain",
+  },
+  {
     slug: "mr-delivery-app",
     title: "MR-DELIVERY-APP",
     description:
@@ -231,7 +269,8 @@ export const projects: Project[] = [
       "HTML",
       "CSS",
     ],
-     repoUrl: "https://nexzo.websys.tec.br/", // Link para "Ver Projeto"
+      repoUrl: "https://nexzo.websys.tec.br/", // Link para "Ver código"
+      liveUrl: "https://nexzo.websys.tec.br/",
     imageUrl: "/images/project/principalnexzoia.png", // Imagem placeholder
     accent: "from-blue-500/70 via-indigo-400/50 to-transparent",
     role: "Product Architect · Em evolução",
@@ -861,7 +900,7 @@ export const skills: Skill[] = [
 ];
 
 export const whatsappLink =
-  "https://wa.me/5521992115015?text=Ol%C3%A1%20THIAGO%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!";
+  "https://wa.me/5521996539330?text=Ol%C3%A1%20THIAGO%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar!";
 
 export const focusCurrent: string[] = [
   "React",

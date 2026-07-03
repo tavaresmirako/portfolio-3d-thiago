@@ -78,7 +78,7 @@ export function About() {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.35 }}
-          className="mx-auto w-full max-w-4xl"
+          className="about-contrast mx-auto w-full max-w-4xl"
           >
             <motion.div
               variants={fadeIn("up", 0.05)}

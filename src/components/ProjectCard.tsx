@@ -49,7 +49,7 @@ const techIconMap: Record<string, string> = {
   'Dashboards/Analytics': 'https://cdn.simpleicons.org/google-sheets',
   n8n: 'https://cdn.simpleicons.org/n8n',
   'API Key': 'https://cdn.simpleicons.org/auth0',
-  Whisper: 'https://cdn.simpleicons.org/openai',
+  Whisper: '/icons/ai-core.svg',
   'Zep Memory': 'https://cdn.simpleicons.org/redis',
   'Google Calendar': 'https://cdn.simpleicons.org/googlecalendar',
   'Google Sheets': 'https://cdn.simpleicons.org/googlesheets',
@@ -65,8 +65,20 @@ const techIconMap: Record<string, string> = {
   'React.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
   'VPS Linux': 'https://cdn.simpleicons.org/linux',
   Nginx: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
+  NGINX: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg',
   Docker: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-  'API Gateway': 'https://cdn.simpleicons.org/auth0'
+  'API Gateway': 'https://cdn.simpleicons.org/auth0',
+  Fastify: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastify/fastify-original.svg',
+  WebSocket: 'https://cdn.simpleicons.org/socketdotio',
+  Kokoro: '/icons/ai-core.svg',
+  pgvector: 'https://cdn.simpleicons.org/postgresql',
+  SQLite: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
+  'better-sqlite3': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg',
+  SearXNG: '/icons/ai-core.svg',
+  Playwright: 'https://cdn.simpleicons.org/playwright',
+  'OpenCode/Codex': '/icons/ai-core.svg',
+  Git: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+  GitHub: 'https://cdn.simpleicons.org/github'
 }
 
 export type ProjectCardProps = {

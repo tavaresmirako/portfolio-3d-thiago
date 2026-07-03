@@ -92,14 +92,14 @@ export function Contact() {
 
             <div className="col-span-12 grid gap-4 text-sm lg:col-span-8 lg:grid-cols-2">
               <a
-                href="tel:+5521992115015"
+                href="tel:+5521996539330"
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 transition-colors duration-300 hover:border-primary/60 hover:bg-primary/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                aria-label="Ligar para +55 21 992115015"
+                aria-label="Ligar para +55 21 99653-9330"
               >
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10">
                   <Phone size={18} className="text-primary" />
                 </span>
-                +55 21 992115015
+                +55 21 99653-9330
               </a>
               <a
                 href="mailto:tavaresmirako@gmail.com"

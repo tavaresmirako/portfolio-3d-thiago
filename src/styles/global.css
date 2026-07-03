@@ -13,12 +13,6 @@
   --accent: #22d3ee;
 }
 
-/* ── Force all text black and bold ───────────────────────────── */
-*, *::before, *::after {
-  color: #000000 !important;
-  font-weight: 700 !important;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -73,7 +67,19 @@ section > div:not([aria-hidden]):not([data-no-card]) {
     0 0 0 1px rgba(6, 182, 212, 0.25),             /* inner neon ring */
     0 0 28px 6px rgba(6, 182, 212, 0.18),          /* soft neon bloom */
     0 0 60px 12px rgba(99, 102, 241, 0.12),        /* deep violet halo */
-    0 20px 60px rgba(0, 0, 0, 0.30);
+  0 20px 60px rgba(0, 0, 0, 0.30);
+}
+
+.hero-contrast,
+.about-contrast {
+  color: #000 !important;
+  font-weight: 700 !important;
+}
+
+.hero-contrast *,
+.about-contrast * {
+  color: #000 !important;
+  font-weight: 700 !important;
 }
 
 
@@ -108,7 +114,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: var(--bg-surface);
-  color: #000000;
+  color: #e5e7eb;
   background-image: radial-gradient(
       780px circle at 0px 0px,
       var(--bg-overlay),
